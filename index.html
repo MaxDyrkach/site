@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oumuamua: The Interstellar Visitor</title>
-
-     <style>
+    <style>
         body {
-            background-color: #2C2F33; 
-            color: #F5DEB3; 
+            background-color: #2C2F33; /* Тёмно-серый фон */
+            color: #F5DEB3; /* Кремовый цвет текста */
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            position: relative;
         }
         img {
-            float: left; 
-            margin-right: 15px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 20px; /* Отступы от края страницы */
             width: 200px;
             height: 200px;
+        }
+        .text {
+            margin-left: 240px; /* Отступ для обтекания текста */
         }
         p, span {
             line-height: 1.6;
@@ -24,8 +32,12 @@
     </style>
 </head>
 <body>
-    <p>Oumuamua is the first known interstellar object detected passing through the Solar System. It was discovered on October 19, 2017.</p>
-    <span>Oumuamua is a unique object due to its origin from another star system, and its elongated shape has led to much debate about its nature. Some scientists speculate that it could be a comet or an asteroid, while others propose more exotic explanations. Its speed and trajectory suggest that it is not bound to the Sun and will eventually leave the Solar System, never to return. Observations were limited because it was already leaving the Solar System when discovered.</span>
-    <img src="Ou-1.jpg" alt="Oumuamua illustration" width="200" height="200">
+    <div class="container">
+        <img src="Ou-1.jpg" alt="Oumuamua illustration">
+        <div class="text">
+            <p>Oumuamua is the first known interstellar object detected passing through the Solar System. It was discovered on October 19, 2017.</p>
+            <span>Oumuamua is a unique object due to its origin from another star system, and its elongated shape has led to much debate about its nature. Some scientists speculate that it could be a comet or an asteroid, while others propose more exotic explanations. Its speed and trajectory suggest that it is not bound to the Sun and will eventually leave the Solar System, never to return. Observations were limited because it was already leaving the Solar System when discovered.</span>
+        </div>
+    </div>
 </body>
 </html>
