@@ -39,6 +39,19 @@
         window.kameleoonDisplayPageTimeOut = window.setTimeout(window.kameleoonDisplayPage, kameleoonLoadingTimeout);
     }
 </script>
+     <script>
+        function toggleText() {
+            const extraText = document.querySelector('.extra-text');
+            const btn = document.querySelector('.show-more');
+            if (extraText.style.display === 'none' || extraText.style.display === '') {
+                extraText.style.display = 'block';
+                btn.textContent = 'Show less';
+            } else {
+                extraText.style.display = 'none';
+                btn.textContent = 'Show more';
+            }
+        }
+    </script>
 <script type="text/javascript" src="//d8ayfblxgr.kameleoon.io/kameleoon.js" async="true" fetchpriority="high"></script>
     
     <style>
@@ -66,6 +79,21 @@
         p, span {
             line-height: 1.6;
         }
+         .extra-text {
+            display: none;
+        }
+        .show-more {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .show-more:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -74,6 +102,8 @@
         <div class="text">
             <p>Oumuamua is the first known interstellar object detected passing through the Solar System. It was discovered on October 19, 2017.</p>
             <span>Oumuamua is a unique object due to its origin from another star system, and its elongated shape has led to much debate about its nature. Some scientists speculate that it could be a comet or an asteroid, while others propose more exotic explanations. Its speed and trajectory suggest that it is not bound to the Sun and will eventually leave the Solar System, never to return. Observations were limited because it was already leaving the Solar System when discovered.</span>
+             <button class="show-more" onclick="toggleText()">Show more</button>
+        <p class="extra-text">After its discovery, researchers focused on studying its unusual characteristics. One of the most intriguing aspects is its lack of a visible tail or coma, which is typical for comets when they approach the Sun. Additionally, Oumuamua's rotation and brightness changes suggest that it is tumbling through space rather than rotating uniformly. Some models propose that it may have been ejected from its original star system by a gravitational interaction with a planet or another large body. Despite the many questions it raises, Oumuamua remains an object of significant scientific curiosity, and it has inspired further efforts to detect and study interstellar visitors.</p>
         </div>
     </div>
 </body>
