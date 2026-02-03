@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oumuamua: The Interstellar Visitor</title>
 
-    <script type="text/javascript">
+   <script type="text/javascript">
     // Duration in milliseconds to wait while the Kameleoon application file is loaded
     var kameleoonLoadingTimeout = 1000;
 
@@ -41,46 +41,7 @@
         window.kameleoonDisplayPageTimeOut = window.setTimeout(window.kameleoonDisplayPage, kameleoonLoadingTimeout);
     }
 </script>
-<script type="text/javascript">
-    // Change the value of this URL to point to your own URL, where the iFrame is hosted
-    window.kameleoonIframeURL = "kameleoon_static_file.html";
-
-    window.kameleoonLightIframe = false;
-    var kameleoonIframeOriginElement = document.createElement("a");
-    kameleoonIframeOriginElement.href = kameleoonIframeURL;
-    window.kameleoonIframeOrigin = kameleoonIframeOriginElement.origin || (kameleoonIframeOriginElement.protocol + "//" + kameleoonIframeOriginElement.hostname);
-    if (location.href.indexOf(window.kameleoonIframeOrigin) != 0)
-    {
-        window.kameleoonLightIframe = true;
-        var kameleoonProcessMessageEvent = function(event)
-        {
-            if (window.kameleoonIframeOrigin == event.origin && event.data.slice && event.data.slice(0,9) == "Kameleoon")
-            {
-                window.removeEventListener("message", kameleoonProcessMessageEvent);
-                window.kameleoonExternalIFrameLoaded = true;
-                if (window.Kameleoon)
-                {
-                    Kameleoon.Utils.runProtectedScript(event.data);
-                    Kameleoon.Analyst.load();
-                }
-                else
-                {
-                    window.kameleoonExternalIFrameLoadedData = event.data;
-                }
-            }
-        };
-        if (window.addEventListener)
-        {
-            window.addEventListener("message", kameleoonProcessMessageEvent, false);
-        }
-        var iframeNode = document.createElement("iframe");
-        iframeNode.src = kameleoonIframeURL;
-        iframeNode.id = "kameleoonExternalIframe";
-        iframeNode.style = "float: left !important; opacity: 0.0 !important; width: 0px !important; height: 0px !important;";
-        document.head.appendChild(iframeNode);
-    }
-</script>
-<script type="text/javascript" src="//d8ayfblxgr.kameleoon.io/engine.js" async="true" fetchpriority="high"></script>
+<script type="text/javascript" src="//igcfuvkcsu.kameleoon.io/engine.js" async="true" fetchpriority="high"></script>
     
     <style>
         body {
